@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+    <header class="Encabezado">  <h1>*****Gabriel Hernandez Martinez*****</h1> </header>
+   <div class="contenedor">
+    <section >
+
+    </section>
+    <div class="botones">
+        <button class="boton">Geolocalizacion</button>
+        <button class="boton">SOCIALES</button>
+        <button class="boton">ONLINE</button>
+        <button class="boton">STREAMING</button>
+        <button class="boton">ECOMMERCE</button>
+        <button class="boton">DATABASE</button>
+        <button class="boton">Botón 6</button>
+    </div>
+</div>
+
+<body> 
+    <script src="https://apis.google.com/js/platform.js"></script>
+
+<div class="g-ytsubscribe" data-channelid="UCkThZBOoQ0CXIgKbC4wf98w" data-layout="full" data-count="default"></div>
+    <script src="https://apis.google.com/js/platform.js"></script>
+
+    <div class="g-ytsubscribe" data-channelid="UCo7qszIfu41oL9v3HKn2d0A" data-layout="full" data-count="default">
+    </div>
+    <!-- 1. El <iframe> (y el reproductor de video) reemplazarán esta etiqueta <div>. -->
+    <div id="player"></div>
+
+    <script>
+        // 2. Este código carga de forma asincrónica el código de la API del Reproductor de YouTube.
+        var tag = document.createElement('script');
+
+        tag.src = "https://www.youtube.com/iframe_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+        // 3. Esta función crea un <iframe> (y el reproductor de YouTube)
+        //    después de que se descarga el código de la API.
+        var player;
+        var player;
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('player', {
+                height: '390',
+                width: '640',
+                videoId: 'NnMfRtjn78d7SM6i',
+                playerVars: {
+                    'autoplay': 0,  // Configura autoplay en 0 para que el video no se reproduzca automáticamente
+                    'controls': 1,
+                    'rel': 0,  // Evita mostrar videos relacionados al final
+                    'showinfo': 0,  // Muestra información del video
+                    'mute': 0,      // Inicia el video en modo silencioso
+                    'start': 0,    //desde donde queremos que inicie el video
+                    'end': 0,  //donde queremos que termine
+                    'modestbranding': 1
+                },
+                events: {
+                    'onReady': onPlayerReady,
+                    'onStateChange': onPlayerStateChange
+                }
+            });
+        }
+
+        // 4. La API llamará a esta función cuando el reproductor de video esté listo.
+        function onPlayerReady(event) {
+            event.target.playVideo();
+        }
+
+
+        // 5. La API llama a esta función cuando cambia el estado del reproductor.
+        //    La función indica que cuando el video se reproduce (state=1),
+        //    el reproductor debería reproducir el video durante seis segundos y luego detenerse.
+        var done = false;
+        function onPlayerStateChange(event) {
+            if (event.data == YT.PlayerState.PLAYING && !done) {
+                setTimeout(stopVideo, 6000); //aqui definimos cuanto durara al inicio
+                done = true;
+            }
+        }
+        function stopVideo() {
+            player.stopVideo();
+        }
+    </script>
+    <a href="youtubelive.html"><button>VER YOUTUBE LIVE</button></a>
+    </body>
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+    <input type="hidden" name="cmd" value="_s-xclick" />
+    <input type="hidden" name="hosted_button_id" value="6SG68JSQHEMK6" />
+    <table>
+      <tr>
+        <td>
+          <input type="hidden" name="on0" value="INGREDIENTE EXTRA"/>
+          INGREDIENTE EXTRA
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <select name="os0">
+            <option value="CAMARONES">
+              CAMARONES
+            </option>
+            <option value="CACAHUATES">
+              CACAHUATES
+            </option>
+            <option value="GOMITAS">
+              GOMITAS
+            </option>
+          </select>
+        </td>
+      </tr>
+    </table>
+    <input type="hidden" name="currency_code" value="MXN" />
+    <input type="image" src="https://www.paypalobjects.com/es_XC/i/btn/btn_paynowCC_LG.gif" border="0" name="submit" title="PayPal es una forma segura y fácil de pagar en línea." alt="Comprar ahora" />
+  </form>
+</body>
+</html>
+<style>
+    body{
+        background: rgb(36, 36, 36);
+        margin: 0;
+    }
+  .boton {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 10px;
+        }
+
+        .Encabezado{
+            color: rgb(255, 255, 255);
+            padding: 20px;
+            text-align: center;
+            border-bottom: 2px solid #333;
+           background: rgb(0, 0, 0);
+        }
+
+        section{
+            background-image: url("th.jpg");
+            width: 700px;
+            height: 700px;
+            background-color: #f0f0f0;
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            /* Agregar sombra */
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+            background-repeat:no-repeat ;
+            background-size: cover;
+          
+        }
+
+        .botones{
+            display: grid;            
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 10px;
+            width: 50%;
+        }
+        
+        .contenedor{
+        display: flex;
+        
+        flex-wrap: wrap;
+        gap: 20px;
+        max-width: 1000px;
+        margin: 0 auto;
+       align-items: start;
+        }
+</style>
